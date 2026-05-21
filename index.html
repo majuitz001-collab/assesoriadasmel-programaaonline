@@ -1,618 +1,578 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <meta name="description" content="Soluções profissionais e inovadoras para o seu negócio. Transparência, ética e resultados comprovados.">
-    <meta name="robots" content="index, follow">
-    <title>WhiteSolutions | Inovação com Integridade</title>
-    <!-- Google Fonts & Font Awesome para ícones profissionais -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Simples Nacional MEI | Emissão DAS</title>
+  <!-- Font Awesome 6 (gratuito para ícones) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #FFFFFF;
-            color: #1E1F24;
-            line-height: 1.5;
-            scroll-behavior: smooth;
-        }
+    body {
+      font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background: linear-gradient(145deg, #eef2f7 0%, #d9e2ec 100%);
+      color: #1a2c3e;
+      line-height: 1.4;
+      padding: 2rem 1.5rem;
+      min-height: 100vh;
+    }
 
-        /* Containers e utilitários */
-        .container {
-            max-width: 1280px;
-            margin: 0 auto;
-            padding: 0 32px;
-        }
+    /* container principal */
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+    }
 
-        /* Header limpo, sem elementos enganosos */
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 24px 0;
-            border-bottom: 1px solid #E9EAEF;
-            flex-wrap: wrap;
-        }
+    /* header com selo MEI */
+    .top-banner {
+      background: #ffffffdd;
+      backdrop-filter: blur(2px);
+      border-radius: 3rem;
+      padding: 0.6rem 1.8rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.03);
+      border: 1px solid rgba(16, 94, 70, 0.2);
+    }
 
-        .logo {
-            font-size: 1.8rem;
-            font-weight: 700;
-            letter-spacing: -0.5px;
-            color: #000000;
-            text-decoration: none;
-        }
+    .top-banner i {
+      font-size: 2rem;
+      color: #0f6b3a;
+    }
 
-        .logo span {
-            color: #2C6EED;
-        }
+    .top-banner span {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: #105e3a;
+      letter-spacing: -0.3px;
+    }
 
-        .nav-links {
-            display: flex;
-            gap: 32px;
-            list-style: none;
-        }
+    /* Card principal */
+    .hero-card {
+      background: #ffffff;
+      border-radius: 2.5rem;
+      box-shadow: 0 25px 45px -12px rgba(0, 0, 0, 0.25);
+      overflow: hidden;
+      transition: transform 0.2s ease;
+    }
 
-        .nav-links a {
-            text-decoration: none;
-            font-weight: 500;
-            color: #2C2D34;
-            transition: color 0.2s;
-        }
+    .hero-inner {
+      padding: 2rem 2rem 2rem 2rem;
+    }
 
-        .nav-links a:hover {
-            color: #2C6EED;
-        }
+    @media (max-width: 640px) {
+      .hero-inner {
+        padding: 1.5rem;
+      }
+      body {
+        padding: 1rem;
+      }
+    }
 
-        /* Botão CTA legítimo, sem clickbait */
-        .btn-primary {
-            background-color: #000000;
-            color: white;
-            padding: 12px 28px;
-            border-radius: 40px;
-            font-weight: 600;
-            text-decoration: none;
-            display: inline-block;
-            transition: all 0.2s ease;
-            border: none;
-            cursor: pointer;
-            font-size: 0.95rem;
-        }
+    /* selo / identificação oficial */
+    .mei-badge {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: #fef9e6;
+      border-left: 6px solid #ffb347;
+      padding: 0.8rem 1.2rem;
+      border-radius: 1.5rem;
+      margin-bottom: 2rem;
+    }
 
-        .btn-primary:hover {
-            background-color: #2C6EED;
-            transform: translateY(-1px);
-        }
+    .mei-badge .icon {
+      font-size: 2.2rem;
+    }
 
-        .btn-outline {
-            background-color: transparent;
-            border: 1px solid #D0D2D8;
-            color: #1E1F24;
-            padding: 10px 24px;
-            border-radius: 40px;
-            font-weight: 500;
-            text-decoration: none;
-            transition: all 0.2s;
-            display: inline-block;
-        }
+    .mei-badge h2 {
+      font-size: 1.7rem;
+      font-weight: 800;
+      color: #2b593e;
+      letter-spacing: -0.5px;
+    }
 
-        .btn-outline:hover {
-            border-color: #2C6EED;
-            color: #2C6EED;
-        }
+    .mei-badge p {
+      font-size: 0.85rem;
+      color: #5a6e7c;
+      margin-top: 4px;
+    }
 
-        /* Hero section - imagem profissional, sem exageros */
-        .hero {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: space-between;
-            gap: 48px;
-            padding: 64px 0 80px;
-        }
+    /* grid info Simples Nacional */
+    .info-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
 
-        .hero-content {
-            flex: 1;
-            min-width: 280px;
-        }
+    .info-card {
+      background: #f8fafc;
+      border-radius: 1.8rem;
+      padding: 1.2rem 1.5rem;
+      flex: 1;
+      min-width: 180px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.02);
+      border: 1px solid #e2edf2;
+      transition: all 0.2s;
+    }
 
-        .hero-content h1 {
-            font-size: 3.2rem;
-            font-weight: 700;
-            line-height: 1.2;
-            margin-bottom: 24px;
-            color: #000000;
-        }
+    .info-card i {
+      font-size: 2rem;
+      color: #2c7a4b;
+      margin-bottom: 0.7rem;
+    }
 
-        .hero-content p {
-            font-size: 1.2rem;
-            color: #4A4B52;
-            margin-bottom: 32px;
-            max-width: 540px;
-        }
+    .info-card h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: #1f3b4c;
+    }
 
-        .hero-image {
-            flex: 1;
-            background: #F8F9FC;
-            border-radius: 32px;
-            overflow: hidden;
-            box-shadow: 0 20px 35px -12px rgba(0,0,0,0.05);
-        }
+    .info-card p {
+      font-size: 0.9rem;
+      color: #2c4b5e;
+      line-height: 1.4;
+    }
 
-        .hero-image img {
-            width: 100%;
-            height: auto;
-            display: block;
-            object-fit: cover;
-        }
+    /* area do botão principal */
+    .action-area {
+      background: linear-gradient(120deg, #f1f9f0, #ffffff);
+      border-radius: 2rem;
+      padding: 2rem 1.8rem;
+      margin: 2rem 0 1.8rem 0;
+      text-align: center;
+      border: 1px solid #cbe5d4;
+      box-shadow: 0 10px 20px rgba(45, 85, 55, 0.08);
+    }
 
-        /* Seção de serviços */
-        .section-title {
-            text-align: center;
-            font-size: 2.2rem;
-            font-weight: 700;
-            margin-bottom: 16px;
-            color: #000;
-        }
+    .action-title {
+      font-size: 1.6rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+      color: #145c33;
+    }
 
-        .section-sub {
-            text-align: center;
-            color: #5B5C63;
-            max-width: 680px;
-            margin: 0 auto 56px auto;
-            font-size: 1.1rem;
-        }
+    .action-sub {
+      font-size: 1rem;
+      color: #3d6b4c;
+      margin-bottom: 1.8rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
 
-        .cards-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 32px;
-            justify-content: center;
-            margin-bottom: 80px;
-        }
+    .btn-emitir {
+      background: #0e6b3c;
+      border: none;
+      color: white;
+      font-size: 1.5rem;
+      font-weight: 700;
+      padding: 1rem 2.5rem;
+      border-radius: 60px;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 16px;
+      box-shadow: 0 12px 18px -8px rgba(0, 80, 50, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
 
-        .card {
-            flex: 1;
-            min-width: 260px;
-            background: #FFFFFF;
-            border-radius: 28px;
-            padding: 32px 24px;
-            text-align: center;
-            box-shadow: 0 12px 30px rgba(0,0,0,0.03);
-            border: 1px solid #EDEEF2;
-            transition: all 0.25s;
-        }
+    .btn-emitir i {
+      font-size: 1.8rem;
+    }
 
-        .card:hover {
-            border-color: #CFD2DC;
-            transform: translateY(-4px);
-        }
+    .btn-emitir:hover {
+      background: #0a562f;
+      transform: scale(1.02);
+      box-shadow: 0 18px 24px -10px rgba(14, 107, 60, 0.5);
+    }
 
-        .card i {
-            font-size: 2.8rem;
-            color: #2C6EED;
-            margin-bottom: 20px;
-        }
+    .btn-emitir:active {
+      transform: scale(0.98);
+    }
 
-        .card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 12px;
-            font-weight: 600;
-        }
+    /* configuração de redirecionamento (local editável) */
+    .redirect-config {
+      background: #fef7e0;
+      border-radius: 1.5rem;
+      padding: 1rem 1.5rem;
+      margin-top: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      font-size: 0.85rem;
+      border-left: 5px solid #ffb347;
+    }
 
-        .card p {
-            color: #5E5F68;
-        }
+    .config-label {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 600;
+      color: #7a5800;
+    }
 
-        /* Seção de valores / confiança */
-        .trust-section {
-            background-color: #FBFCFE;
-            border-radius: 48px;
-            padding: 64px 48px;
-            margin: 40px 0 60px;
-            border: 1px solid #F0F1F6;
-        }
+    .config-input-group {
+      flex: 2;
+      min-width: 220px;
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
 
-        .trust-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 48px;
-            justify-content: space-between;
-            align-items: center;
-        }
+    .config-input-group input {
+      flex: 3;
+      padding: 8px 14px;
+      border-radius: 60px;
+      border: 1px solid #e2c28b;
+      background: white;
+      font-family: monospace;
+      font-size: 0.85rem;
+      outline: none;
+      transition: 0.2s;
+    }
 
-        .trust-text {
-            flex: 1.2;
-        }
+    .config-input-group input:focus {
+      border-color: #0e6b3c;
+      box-shadow: 0 0 0 2px rgba(14, 107, 60, 0.2);
+    }
 
-        .trust-text h2 {
-            font-size: 2rem;
-            font-weight: 700;
-            margin-bottom: 20px;
-        }
+    .copy-hint {
+      font-size: 0.7rem;
+      color: #946f2c;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
 
-        .trust-list {
-            list-style: none;
-            margin-top: 24px;
-        }
+    .small-note {
+      background: #e9f3ef;
+      border-radius: 1rem;
+      padding: 0.8rem 1.2rem;
+      margin-top: 2rem;
+      font-size: 0.8rem;
+      color: #2c5a45;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
 
-        .trust-list li {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 18px;
-            font-size: 1rem;
-        }
+    footer {
+      margin-top: 3rem;
+      text-align: center;
+      font-size: 0.75rem;
+      color: #4c6a5b;
+    }
 
-        .trust-list i {
-            color: #2C6EED;
-            font-size: 1.3rem;
-        }
+    i.fa, i.far, i.fas {
+      pointer-events: none;
+    }
 
-        .trust-image {
-            flex: 1;
-            border-radius: 28px;
-            overflow: hidden;
-            box-shadow: 0 12px 28px -8px rgba(0,0,0,0.08);
-        }
-
-        .trust-image img {
-            width: 100%;
-            display: block;
-        }
-
-        /* Seção de contato simples e profissional */
-        .contact {
-            text-align: center;
-            padding: 64px 0 80px;
-            border-top: 1px solid #EFF0F4;
-        }
-
-        .contact h2 {
-            font-size: 2.2rem;
-            margin-bottom: 16px;
-        }
-
-        .contact p {
-            max-width: 560px;
-            margin: 0 auto 32px auto;
-            color: #5B5C63;
-        }
-
-        .contact-buttons {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        /* Footer transparente e informativo */
-        footer {
-            background-color: #FAFAFC;
-            border-top: 1px solid #E9EAEF;
-            padding: 48px 0 32px;
-            margin-top: 40px;
-        }
-
-        .footer-inner {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            gap: 40px;
-        }
-
-        .footer-brand p {
-            color: #6A6B74;
-            margin-top: 12px;
-            max-width: 260px;
-        }
-
-        .footer-links {
-            display: flex;
-            gap: 64px;
-            flex-wrap: wrap;
-        }
-
-        .footer-links h4 {
-            font-weight: 600;
-            margin-bottom: 16px;
-        }
-
-        .footer-links a {
-            display: block;
-            text-decoration: none;
-            color: #5A5B62;
-            margin-bottom: 10px;
-            font-size: 0.9rem;
-            transition: color 0.2s;
-        }
-
-        .footer-links a:hover {
-            color: #2C6EED;
-        }
-
-        .copyright {
-            text-align: center;
-            margin-top: 48px;
-            padding-top: 24px;
-            border-top: 1px solid #E9EAEF;
-            color: #7C7D86;
-            font-size: 0.85rem;
-        }
-
-        /* Responsividade total */
-        @media (max-width: 900px) {
-            .container {
-                padding: 0 24px;
-            }
-            .hero h1 {
-                font-size: 2.4rem;
-            }
-            .navbar {
-                flex-direction: column;
-                gap: 20px;
-            }
-            .nav-links {
-                gap: 24px;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-            .trust-section {
-                padding: 40px 24px;
-            }
-        }
-
-        @media (max-width: 680px) {
-            .hero {
-                flex-direction: column-reverse;
-                text-align: center;
-                padding: 32px 0;
-            }
-            .hero-content p {
-                margin-left: auto;
-                margin-right: auto;
-            }
-            .trust-grid {
-                flex-direction: column;
-            }
-            .section-title {
-                font-size: 1.9rem;
-            }
-            .btn-primary, .btn-outline {
-                padding: 10px 20px;
-            }
-        }
-
-        /* Políticas Google Ads: sem links enganosos, sem redirecionamento automático, sem pop-ups, sem conteúdo enganoso */
-        /* Garantia de que todos os links são legítimos e transparentes */
-        a, button {
-            cursor: pointer;
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-    </style>
+    hr {
+      margin: 1rem 0;
+      border: none;
+      height: 1px;
+      background: linear-gradient(to right, transparent, #cbdbe0, transparent);
+    }
+  </style>
 </head>
 <body>
+<div class="container">
+  <!-- selo pequeno superior -->
+  <div class="top-banner">
+    <i class="fas fa-receipt"></i>
+    <span>DOCUMENTOS DE ARRECADAÇÃO do Simples Nacional</span>
+    <i class="fas fa-brazilian-real-sign"></i>
+  </div>
 
-<header>
-    <div class="container">
-        <nav class="navbar">
-            <a href="#" class="logo">White<span>Solutions</span></a>
-            <ul class="nav-links">
-                <li><a href="#">Início</a></li>
-                <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-            <a href="#contato" class="btn-outline">Consultoria gratuita</a>
-        </nav>
-    </div>
-</header>
-
-<main>
-    <div class="container">
-        <!-- Hero com imagem profissional "white label" e neutra -->
-        <div class="hero">
-            <div class="hero-content">
-                <h1>Soluções que elevam o seu negócio com ética</h1>
-                <p>Estratégias modernas, compliance absoluto e resultados mensuráveis. Parceiros de empresas que valorizam transparência.</p>
-                <a href="#contato" class="btn-primary">Fale com um especialista →</a>
-            </div>
-            <div class="hero-image">
-                <!-- Imagem profissional, sem elementos ofensivos ou clickbait -->
-                <img src="https://placehold.co/600x500/EEF2FF/2C6EED?text=Team+Collaboration" alt="Equipe profissional colaborando em projeto">
-            </div>
+  <!-- card principal -->
+  <div class="hero-card">
+    <div class="hero-inner">
+      
+      <!-- identidade MEI -->
+      <div class="mei-badge">
+        <div class="icon">
+          <i class="fas fa-user-check"></i>
         </div>
-    </div>
-
-    <!-- Seção Serviços (totalmente white, descritiva) -->
-    <div class="container" id="servicos">
-        <h2 class="section-title">Serviços sob medida</h2>
-        <p class="section-sub">Focados em impacto real com integridade. Tecnologia, consultoria e inovação responsável.</p>
-        <div class="cards-grid">
-            <div class="card">
-                <i class="fas fa-chart-line"></i>
-                <h3>Marketing Ético</h3>
-                <p>Campanhas dentro das políticas do Google Ads, ROI mensurável e total transparência.</p>
-            </div>
-            <div class="card">
-                <i class="fas fa-shield-alt"></i>
-                <h3>Consultoria Compliance</h3>
-                <p>Auditoria completa para garantir que sua conta nunca tenha riscos de suspensão.</p>
-            </div>
-            <div class="card">
-                <i class="fas fa-laptop-code"></i>
-                <h3>Landing Pages White</h3>
-                <p>Páginas otimizadas, rápidas e 100% em conformidade com as políticas de anúncios.</p>
-            </div>
-            <div class="card">
-                <i class="fas fa-database"></i>
-                <h3>Análise de Dados</h3>
-                <p>Insights acionáveis para decisões estratégicas, respeitando LGPD e boas práticas.</p>
-            </div>
+        <div>
+          <h2>Microempreendedor Individual</h2>
+          <p>Simples Nacional • regime favorecido • CNPJ e contribuição unificada</p>
         </div>
-    </div>
-
-    <!-- Seção Sobre / Confiança com imagem -->
-    <div class="container" id="sobre">
-        <div class="trust-section">
-            <div class="trust-grid">
-                <div class="trust-text">
-                    <h2>Construindo pontes com integridade</h2>
-                    <p>Há mais de 8 anos ajudamos empresas de todos os portes a escalar com responsabilidade. Nossa metodologia é totalmente compatível com as políticas mais rigorosas de plataformas como Google, Meta e LinkedIn.</p>
-                    <ul class="trust-list">
-                        <li><i class="fas fa-check-circle"></i> 100% em conformidade com Google Ads</li>
-                        <li><i class="fas fa-check-circle"></i> Transparência total em métricas e custos</li>
-                        <li><i class="fas fa-check-circle"></i> Suporte dedicado e contratos claros</li>
-                        <li><i class="fas fa-check-circle"></i> Abordagem white-hat, zero práticas enganosas</li>
-                    </ul>
-                </div>
-                <div class="trust-image">
-                    <img src="https://placehold.co/550x400/F3F5FF/2C6EED?text=Trust+&+Integrity" alt="Profissionais em reunião ética e transparente">
-                </div>
-            </div>
+        <div style="margin-left: auto;">
+          <i class="fas fa-shield-alt" style="font-size: 2rem; color: #ffb347;"></i>
         </div>
-    </div>
+      </div>
 
-    <!-- Por que escolher a WhiteSolutions (diferenciais) -->
-    <div class="container">
-        <h2 class="section-title">Por que somos a escolha certa</h2>
-        <p class="section-sub">Compromisso com a longevidade da sua conta de anúncios e com a reputação da sua marca.</p>
-        <div class="cards-grid" style="margin-bottom: 40px;">
-            <div class="card">
-                <i class="fas fa-handshake"></i>
-                <h3>Parceria Estratégica</h3>
-                <p>Atuamos como uma extensão do seu time, com metas alinhadas e resultados sustentáveis.</p>
-            </div>
-            <div class="card">
-                <i class="fas fa-file-alt"></i>
-                <h3>Políticas em dia</h3>
-                <p>Todos os assets são revisados para evitar qualquer tipo de violação (conteúdo enganoso, destinação incorreta, etc).</p>
-            </div>
-            <div class="card">
-                <i class="fas fa-chart-simple"></i>
-                <h3>Relatórios Claros</h3>
-                <p>Dashboards intuitivos e reuniões mensais para mostrar cada centavo investido e os ganhos reais.</p>
-            </div>
+      <!-- blocos informativos sobre o DAS MEI e Simples -->
+      <div class="info-grid">
+        <div class="info-card">
+          <i class="fas fa-calendar-alt"></i>
+          <h3>Contribuição Mensal (DAS)</h3>
+          <p>Valor fixo proporcional: 5% do salário mínimo + R$ 1,00 (ISS/ICMS opcional). Documento único de arrecadação.</p>
         </div>
-    </div>
+        <div class="info-card">
+          <i class="fas fa-chart-line"></i>
+          <h3>Simples Nacional MEI</h3>
+          <p>Cobertura previdenciária, CNPJ ativo, emissão de notas e direitos简化. Pagamento em dia garante benefícios.</p>
+        </div>
+        <div class="info-card">
+          <i class="fas fa-hand-holding-usd"></i>
+          <h3>Vencimento</h3>
+          <p>Todo dia 20 de cada mês. Atraso gera multa e juros. Emita seu DAS e mantenha a regularidade fiscal.</p>
+        </div>
+      </div>
 
-    <!-- Contato seguro e claro -->
-    <div class="container" id="contato">
-        <div class="contact">
-            <h2>Vamos conversar?</h2>
-            <p>Preencha o formulário ou fale diretamente conosco. Garantimos resposta em até 24 horas úteis.</p>
-            <!-- Formulário de contato simples, sem captura de dados sensíveis, sem redirecionamento automático, com ação aparente -->
-            <form action="#" method="post" style="max-width: 540px; margin: 0 auto 32px auto; text-align: left;">
-                <div style="display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 20px;">
-                    <input type="text" placeholder="Nome completo" required style="flex:1; padding: 14px 18px; border-radius: 48px; border: 1px solid #D4D6DD; font-family: inherit; background: #FFFFFF;">
-                    <input type="email" placeholder="E-mail corporativo" required style="flex:1; padding: 14px 18px; border-radius: 48px; border: 1px solid #D4D6DD; font-family: inherit;">
-                </div>
-                <textarea rows="3" placeholder="Como podemos ajudar?" style="width: 100%; padding: 14px 18px; border-radius: 28px; border: 1px solid #D4D6DD; font-family: inherit; margin-bottom: 20px;"></textarea>
-                <div style="text-align: center;">
-                    <button type="submit" class="btn-primary" style="border: none; width: auto;">Enviar mensagem</button>
-                </div>
-                <p style="font-size: 0.75rem; color: #888; text-align: center; margin-top: 16px;">Ao enviar, você concorda com nossa Política de Privacidade. Seus dados estão seguros.</p>
-            </form>
-            <div class="contact-buttons">
-                <a href="mailto:contato@whitesolutions.com" class="btn-outline"><i class="far fa-envelope"></i> contato@whitesolutions.com</a>
-                <a href="tel:+5511999999999" class="btn-outline"><i class="fas fa-phone-alt"></i> +55 (11) 99999-9999</a>
-            </div>
+      <!-- AREA PRINCIPAL: BOTÃO PARA EMITIR PGMEI / DAS -->
+      <div class="action-area">
+        <div class="action-title">
+          <i class="fas fa-file-invoice-dollar"></i> EMITIR PGMEI - DAS MEI
         </div>
-    </div>
-</main>
+        <div class="action-sub">
+          <span>Pagamento da Contribuição Mensal (DAS)</span>
+          <span class="badge" style="background:#e0f0e6; padding:4px 12px; border-radius:40px;">obrigatório todo mês</span>
+        </div>
+        
+        <!-- BOTÃO PRINCIPAL: redireciona para o site configurado abaixo -->
+        <button id="btnEmitirDas" class="btn-emitir">
+          <i class="fas fa-qrcode"></i> EMITIR BOLETO DAS MEI
+          <i class="fas fa-arrow-right"></i>
+        </button>
+        
+        <div class="redirect-config" id="redirectConfigPanel">
+          <div class="config-label">
+            <i class="fas fa-link"></i> 
+            <span>URL de redirecionamento (portal oficial):</span>
+          </div>
+          <div class="config-input-group">
+            <input type="text" id="redirectUrlInput" 
+                   placeholder="https://www.gov.br/empresas-e-negocios/pt-br/mei/emissao-das" 
+                   value="https://www.gov.br/empresas-e-negocios/pt-br/mei/emissao-das">
+            <button id="applyUrlBtn" class="small-btn" style="background:#fff2df; border:1px solid #dbb45c; border-radius:40px; padding:6px 16px; cursor:pointer; font-weight:600;">Aplicar</button>
+          </div>
+          <div class="copy-hint">
+            <i class="fas fa-edit"></i> <span>Altere o endereço do site desejado (ex: site original que você possui)</span>
+          </div>
+        </div>
+        <p style="font-size:0.75rem; margin-top: 1rem; color:#526e5f;"><i class="fas fa-info-circle"></i> Ao clicar no botão, você será redirecionado para o portal oficial de emissão do DAS. O link pode ser alterado acima.</p>
+      </div>
 
-<footer>
-    <div class="container">
-        <div class="footer-inner">
-            <div class="footer-brand">
-                <a href="#" class="logo" style="font-size:1.5rem;">White<span>Solutions</span></a>
-                <p>Ética, transparência e crescimento sustentável para o seu negócio digital.</p>
-            </div>
-            <div class="footer-links">
-                <div>
-                    <h4>Empresa</h4>
-                    <a href="#">Sobre nós</a>
-                    <a href="#">Carreiras</a>
-                    <a href="#">Blog oficial</a>
-                </div>
-                <div>
-                    <h4>Recursos</h4>
-                    <a href="#">Central de ajuda</a>
-                    <a href="#">Política de privacidade</a>
-                    <a href="#">Termos de uso</a>
-                </div>
-                <div>
-                    <h4>Redes</h4>
-                    <a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                    <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
-                </div>
-            </div>
-        </div>
-        <div class="copyright">
-            © 2025 WhiteSolutions - Todos os direitos reservados. CNPJ 12.345.678/0001-90<br>
-            Site em conformidade com as políticas do Google Ads e práticas recomendadas para anunciantes.
-        </div>
-    </div>
-</footer>
+      <!-- bloco extra sobre o DAS / lembretes -->
+      <div class="small-note">
+        <i class="fas fa-exclamation-triangle" style="font-size:1.2rem;"></i>
+        <span><strong>Importante:</strong> O Documento de Arrecadação do Simples Nacional (DAS) é gerado pelo portal do Simples Nacional ou pelo aplicativo MEI. Mantenha seu cadastro atualizado.</span>
+        <i class="fas fa-credit-card"></i>
+      </div>
 
-<!-- Nenhum script invasivo, pop-up, redirecionamento ou conteúdo dinâmico que possa violar políticas -->
+      <!-- rodapé ilustrativo com documentação -->
+      <hr>
+      <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; font-size: 0.75rem; color: #4e6b5e; margin-top: 1rem;">
+        <div><i class="far fa-clock"></i> Vencimento: até dia 20 de cada mês</div>
+        <div><i class="fas fa-building"></i> Simples Nacional – MEI</div>
+        <div><i class="fas fa-barcode"></i> Emissão de boletos bancários / PIX</div>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <i class="far fa-registered"></i> Portal referência para Microempreendedores Individuais · Documentos de arrecadação oficiais
+  </footer>
+</div>
+
 <script>
-    // Apenas um script leve para smooth scroll e feedback de formulário (sem coletar dados reais)
-    // NÃO há rastreamento invasivo, NENHUM pixel não autorizado, apenas melhor UX.
-    (function() {
-        // Smooth scroll para links internos
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                const targetId = this.getAttribute('href');
-                if (targetId === "#" || targetId === "") return;
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    e.preventDefault();
-                    targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-            });
-        });
-
-        // Simular envio de formulário apenas para demonstrar comportamento ético, sem envio real
-        const form = document.querySelector('form');
-        if (form) {
-            form.addEventListener('submit', function(event) {
-                event.preventDefault();
-                // Mensagem simples não intrusiva, conforme política Google - não gera popups agressivos nem redireciona.
-                // Apenas um alert nativo discreto, pode ser substituído por uma notificação sutil, mas sem violar UX.
-                // De acordo com as políticas, um alerta para simular envio não é considerado enganoso desde que claro.
-                alert("✓ Mensagem recebida! Em breve um de nossos consultores retornará o contato. Obrigado pela confiança.");
-                // Limpar campos de forma ética
-                form.reset();
-            });
-        }
-    })();
-</script>
-
-<!-- 
-    Diretrizes Google Ads cumpridas:
-    1. Nenhum conteúdo falso ou enganoso.
-    2. Nenhum redirecionamento automático.
-    3. Nenhum pop-up ou janela inesperada.
-    4. Política de "Experiência na página": site responsivo, navegação funcional e transparente.
-    5. Sem anúncios ou links patrocinados enganadores.
-    6. Sem coleta ou solicitação enganosa de dados pessoais.
-    7. Sem links quebrados ou conteúdo oculto.
-    8. Conteúdo totalmente "white hat", sem práticas de cloaking ou doorway pages.
-    9. Informações de contato reais (exemplo institucional) e política de privacidade referenciada.
-    10. Estrutura clara para o usuário, sem assustar ou pressionar compra imediata.
+  (function() {
+    // --- Configuração do redirecionamento (armazenamento local para persistência opcional)
+    const STORAGE_KEY = 'mei_redirect_url';
     
-    Observação: As imagens utilizadas são placeholders e devem ser substituídas por imagens de alta qualidade, licenciadas e de acordo com as políticas.
-    Textos e ofertas são genéricos e não violam nenhuma norma de "produtos proibidos".
- -->
+    // Elementos DOM
+    const redirectInput = document.getElementById('redirectUrlInput');
+    const applyBtn = document.getElementById('applyUrlBtn');
+    const emitBtn = document.getElementById('btnEmitirDas');
+    
+    // Função para salvar e validar URL atual
+    let currentRedirectUrl = '';
+    
+    function isValidUrl(stringUrl) {
+      // Aceita URLs http, https e também gov.br etc. Evita javascript: ou dados perigosos
+      if (!stringUrl) return false;
+      // segurança básica: precisa começar com http:// ou https://
+      const lower = stringUrl.trim().toLowerCase();
+      if (lower.startsWith('http://') || lower.startsWith('https://')) {
+        try {
+          // testa se é uma URL minimamente válida (new URL lança erro caso seja mal formatada)
+          new URL(stringUrl);
+          return true;
+        } catch(e) {
+          return false;
+        }
+      }
+      // também permite urls relativas? evitamos por segurança, mas para maior compatibilidade alguns sites podem ter "//dominio.com"
+      if (lower.startsWith('//')) {
+        try {
+          new URL('https:' + stringUrl);
+          return true;
+        } catch(e) { return false; }
+      }
+      return false;
+    }
+    
+    // Normaliza e valida, retorna url limpa ou null
+    function normalizeAndValidate(url) {
+      let trimmed = url.trim();
+      if (!trimmed) return null;
+      // se não tiver protocolo e não começar com //, adiciona https:// para tentar proteger
+      if (!trimmed.startsWith('http://') && !trimmed.startsWith('https://') && !trimmed.startsWith('//')) {
+        trimmed = 'https://' + trimmed;
+      }
+      if (isValidUrl(trimmed)) {
+        return trimmed;
+      }
+      return null;
+    }
+    
+    // Carrega valor salvo no localStorage ou usa default (portal oficial MEI)
+    function loadStoredUrl() {
+      const stored = localStorage.getItem(STORAGE_KEY);
+      let defaultUrl = "https://www.gov.br/empresas-e-negocios/pt-br/mei/emissao-das";
+      if (stored && normalizeAndValidate(stored)) {
+        defaultUrl = stored;
+      }
+      // Se o valor armazenado é diferente do current e válido, atualiza
+      currentRedirectUrl = defaultUrl;
+      redirectInput.value = currentRedirectUrl;
+    }
+    
+    // Salva a URL atual no storage e atualiza variável
+    function setRedirectUrl(newUrl, saveToStorage = true) {
+      const validated = normalizeAndValidate(newUrl);
+      if (validated) {
+        currentRedirectUrl = validated;
+        if (saveToStorage) {
+          localStorage.setItem(STORAGE_KEY, validated);
+        }
+        redirectInput.value = validated;
+        // feedback visual sutil
+        showTemporaryMessage('URL atualizada com sucesso!', '#0e6b3c');
+        return true;
+      } else {
+        // Se inválido, restaura o último válido e mostra erro
+        if (currentRedirectUrl) {
+          redirectInput.value = currentRedirectUrl;
+        } else {
+          // fallback
+          const fallback = "https://www.gov.br/empresas-e-negocios/pt-br/mei/emissao-das";
+          currentRedirectUrl = fallback;
+          redirectInput.value = fallback;
+          localStorage.setItem(STORAGE_KEY, fallback);
+        }
+        showTemporaryMessage('❌ URL inválida! Use http:// ou https://. Exemplo: https://siteoficial.gov.br', '#c0392b');
+        return false;
+      }
+    }
+    
+    // Mensagem flutuante temporária não intrusiva
+    let msgTimeout = null;
+    function showTemporaryMessage(msg, bgColor = '#2c7a4b') {
+      // remove mensagem anterior se existir
+      const existingMsg = document.getElementById('dynamicToastMsg');
+      if (existingMsg) existingMsg.remove();
+      if (msgTimeout) clearTimeout(msgTimeout);
+      
+      const toast = document.createElement('div');
+      toast.id = 'dynamicToastMsg';
+      toast.innerText = msg;
+      toast.style.position = 'fixed';
+      toast.style.bottom = '20px';
+      toast.style.left = '50%';
+      toast.style.transform = 'translateX(-50%)';
+      toast.style.backgroundColor = bgColor;
+      toast.style.color = 'white';
+      toast.style.padding = '10px 20px';
+      toast.style.borderRadius = '50px';
+      toast.style.fontSize = '0.9rem';
+      toast.style.fontWeight = '500';
+      toast.style.zIndex = '9999';
+      toast.style.boxShadow = '0 6px 14px rgba(0,0,0,0.2)';
+      toast.style.backdropFilter = 'blur(4px)';
+      toast.style.fontFamily = 'inherit';
+      toast.style.maxWidth = '90%';
+      toast.style.textAlign = 'center';
+      document.body.appendChild(toast);
+      
+      msgTimeout = setTimeout(() => {
+        if (toast && toast.remove) toast.remove();
+      }, 3000);
+    }
+    
+    // Função de redirecionamento principal acionada pelo botão
+    function redirectToEmitirDas() {
+      if (!currentRedirectUrl) {
+        // se por algum motivo não houver, recarrega default
+        const fallback = "https://www.gov.br/empresas-e-negocios/pt-br/mei/emissao-das";
+        setRedirectUrl(fallback, true);
+      }
+      let targetUrl = currentRedirectUrl;
+      // segurança extra: verificar novamente se é um link seguro
+      const safeUrl = normalizeAndValidate(targetUrl);
+      if (!safeUrl) {
+        showTemporaryMessage("⚠️ A URL configurada é inválida. Revise o campo de redirecionamento.", "#b55a2c");
+        return;
+      }
+      // abre em nova aba para melhor experiência (evita perda da página de configuração)
+      window.open(safeUrl, '_blank');
+      // feedback ao usuário
+      showTemporaryMessage(`🔁 Redirecionando para emissão DAS MEI: ${safeUrl}`, '#1f6e43');
+    }
+    
+    // Aplica a URL digitada manualmente
+    function applyUrlFromInput() {
+      const rawUrl = redirectInput.value;
+      if (setRedirectUrl(rawUrl, true)) {
+        // tudo certo
+      } else {
+        // setRedirectUrl já restaura o válido e mostra erro
+      }
+    }
+    
+    // Inicialização: carregar url salva ou padrão, também garantir que ao clicar no botão de emitir, use essa url
+    function init() {
+      loadStoredUrl();   // define currentRedirectUrl e valor no input
+      // garantir que se após load o current está vazio, set default
+      if (!currentRedirectUrl) {
+        const defaultGov = "https://www.gov.br/empresas-e-negocios/pt-br/mei/emissao-das";
+        setRedirectUrl(defaultGov, true);
+      }
+      // event listeners
+      emitBtn.addEventListener('click', redirectToEmitirDas);
+      applyBtn.addEventListener('click', applyUrlFromInput);
+      // permitir que o campo input aceite Enter para aplicar
+      redirectInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+          e.preventDefault();
+          applyUrlFromInput();
+        }
+      });
+      
+      // opcional: informar que o redirecionamento é personalizável
+      console.log('PGMEI - DAS MEI | Botão configurado para redirecionar para:', currentRedirectUrl);
+    }
+    
+    init();
+  })();
+</script>
 </body>
 </html>

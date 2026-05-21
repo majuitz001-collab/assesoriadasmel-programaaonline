@@ -1,521 +1,522 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <title>Simples Nacional MEI | Emissão DAS</title>
-  <!-- Font Awesome 6 (gratuito) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Mirante • Roupas básicas masculinas e femininas</title>
+    <!-- Google Fonts + Font Awesome (estilo clean) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    body {
-      font-family: 'Segoe UI', 'Poppins', Roboto, 'Helvetica Neue', sans-serif;
-      background: linear-gradient(135deg, #e0f0e8 0%, #c8e0d4 100%);
-      color: #1a2e2c;
-      line-height: 1.4;
-      min-height: 100vh;
-      padding: 2rem 1.5rem;
-      position: relative;
-    }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+            color: #1a1a1a;
+            line-height: 1.4;
+        }
 
-    /* Efeito de textura sutil */
-    body::before {
-      content: "";
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-image: radial-gradient(rgba(40, 90, 60, 0.08) 1.5px, transparent 1.5px);
-      background-size: 28px 28px;
-      pointer-events: none;
-      z-index: 0;
-    }
+        /* container padrão */
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
 
-    .container {
-      max-width: 1280px;
-      margin: 0 auto;
-      position: relative;
-      z-index: 2;
-    }
+        /* TOP BAR (benefícios) */
+        .top-bar {
+            background-color: #f5f2eb;
+            padding: 10px 0;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #2c2c2c;
+            overflow-x: auto;
+            white-space: nowrap;
+            scrollbar-width: thin;
+        }
+        .top-bar .benefits {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        .top-bar .benefit-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .top-bar .benefit-item i {
+            color: #a17a4b;
+            font-size: 0.9rem;
+        }
 
-    /* Header com ilustração e identidade */
-    .hero-section {
-      background: rgba(255, 255, 255, 0.92);
-      backdrop-filter: blur(2px);
-      border-radius: 3rem;
-      padding: 1rem 2rem;
-      margin-bottom: 2rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 1rem;
-      box-shadow: 0 12px 22px rgba(0, 0, 0, 0.05);
-      border: 1px solid rgba(60, 110, 80, 0.25);
-    }
+        /* header principal */
+        .main-header {
+            padding: 20px 0;
+            border-bottom: 1px solid #eaeaea;
+            background: white;
+        }
+        .header-grid {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .logo h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            color: #1e2a2e;
+        }
+        .logo span {
+            font-weight: 300;
+            color: #a17a4b;
+        }
+        .search-bar {
+            flex: 1;
+            max-width: 400px;
+            display: flex;
+            border: 1px solid #ddd;
+            border-radius: 40px;
+            overflow: hidden;
+            background: #fff;
+        }
+        .search-bar input {
+            flex: 1;
+            padding: 12px 18px;
+            border: none;
+            outline: none;
+            font-size: 0.9rem;
+        }
+        .search-bar button {
+            background: #1e2a2e;
+            border: none;
+            padding: 0 20px;
+            color: white;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .search-bar button:hover {
+            background: #a17a4b;
+        }
+        .header-icons {
+            display: flex;
+            gap: 20px;
+        }
+        .header-icons a {
+            color: #1e2a2e;
+            font-size: 1.3rem;
+            text-decoration: none;
+            transition: 0.2s;
+        }
+        .header-icons a:hover {
+            color: #a17a4b;
+        }
 
-    .logo-area {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-    }
+        /* menu de navegação */
+        .nav-menu {
+            background: #ffffff;
+            border-bottom: 1px solid #efefef;
+            padding: 12px 0;
+        }
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+        .nav-links li a {
+            text-decoration: none;
+            color: #2c2c2c;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: 0.2s;
+        }
+        .nav-links li a:hover {
+            color: #a17a4b;
+        }
 
-    .logo-icon {
-      background: #0f6b3a;
-      width: 48px;
-      height: 48px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 8px 14px rgba(0, 0, 0, 0.1);
-    }
+        /* banner / cupom destaque */
+        .cupom-banner {
+            background: #e7e0d4;
+            margin: 30px 0 20px;
+            border-radius: 28px;
+            padding: 28px 24px;
+            text-align: center;
+        }
+        .cupom-highlight {
+            font-size: 1.7rem;
+            font-weight: 700;
+            color: #1e2a2e;
+        }
+        .cupom-highlight small {
+            font-size: 1rem;
+            font-weight: 400;
+            background: #1e2a2e;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 40px;
+            margin-left: 12px;
+        }
+        .sub-cupom {
+            margin-top: 12px;
+            font-weight: 500;
+            color: #5e503f;
+        }
 
-    .logo-icon i {
-      font-size: 1.8rem;
-      color: #FFD966;
-    }
+        /* seções de produtos */
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin: 50px 0 20px;
+            text-align: center;
+            letter-spacing: -0.3px;
+        }
+        .section-title span {
+            border-bottom: 3px solid #a17a4b;
+            padding-bottom: 6px;
+            display: inline-block;
+        }
 
-    .logo-text h1 {
-      font-size: 1.6rem;
-      font-weight: 800;
-      letter-spacing: -0.3px;
-      background: linear-gradient(120deg, #196f42, #2b9b5e);
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
-    }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px 20px;
+            margin-bottom: 60px;
+        }
+        .product-card {
+            background: white;
+            transition: transform 0.2s, box-shadow 0.2s;
+            border-radius: 16px;
+            overflow: hidden;
+            position: relative;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.05);
+        }
+        .product-image {
+            background: #f9f9f9;
+            border-radius: 16px;
+            aspect-ratio: 1 / 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f3f0ea;
+            margin-bottom: 12px;
+        }
+        .product-image i {
+            font-size: 4rem;
+            color: #bcae8b;
+        }
+        .product-info {
+            padding: 0 6px;
+        }
+        .product-title {
+            font-weight: 500;
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+            color: #2d2d2d;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .price-row {
+            display: flex;
+            align-items: baseline;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin: 8px 0 4px;
+        }
+        .old-price {
+            font-size: 0.8rem;
+            color: #8b8b8b;
+            text-decoration: line-through;
+        }
+        .current-price {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #1e2a2e;
+        }
+        .payment-method {
+            font-size: 0.7rem;
+            color: #5e5e5e;
+        }
+        .badge-off {
+            background: #d14423;
+            color: white;
+            font-size: 0.7rem;
+            font-weight: 600;
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 30px;
+            margin-top: 6px;
+        }
+        .rating i {
+            color: #f5b342;
+            font-size: 0.7rem;
+        }
+        .rating span {
+            font-size: 0.75rem;
+            margin-left: 4px;
+            color: #666;
+        }
 
-    .logo-text span {
-      font-size: 0.75rem;
-      color: #3b6d53;
-      font-weight: 500;
-    }
+        /* rodapé */
+        footer {
+            background: #1e2a2e;
+            color: #e2e2e2;
+            margin-top: 80px;
+            padding: 48px 0 24px;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 32px;
+            margin-bottom: 32px;
+        }
+        .footer-col h4 {
+            color: #fff;
+            margin-bottom: 18px;
+            font-weight: 600;
+        }
+        .footer-col p, .footer-col a {
+            color: #c0c0c0;
+            text-decoration: none;
+            font-size: 0.85rem;
+            line-height: 1.7;
+            display: block;
+        }
+        .footer-col a:hover {
+            color: #a17a4b;
+        }
+        .copyright {
+            text-align: center;
+            padding-top: 24px;
+            border-top: 1px solid #2f3e42;
+            font-size: 0.75rem;
+        }
 
-    .badge-simples {
-      background: #fef1cf;
-      padding: 0.5rem 1.2rem;
-      border-radius: 40px;
-      font-weight: 700;
-      font-size: 0.85rem;
-      color: #c27e0e;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    /* Card principal premium */
-    .main-card {
-      background: #ffffff;
-      border-radius: 2.5rem;
-      overflow: hidden;
-      box-shadow: 0 30px 45px -20px rgba(0, 32, 16, 0.3);
-      transition: transform 0.2s;
-    }
-
-    .card-inner {
-      padding: 2.2rem;
-    }
-
-    @media (max-width: 640px) {
-      .card-inner {
-        padding: 1.5rem;
-      }
-      body {
-        padding: 1rem;
-      }
-      .hero-section {
-        padding: 1rem 1.2rem;
-      }
-    }
-
-    /* Imagem conceito / ícones melhorados */
-    .mei-showcase {
-      display: flex;
-      align-items: center;
-      gap: 1.8rem;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      margin-bottom: 2rem;
-      background: linear-gradient(110deg, #F9FDFB, #F4F9F6);
-      padding: 1.2rem 1.8rem;
-      border-radius: 2rem;
-    }
-
-    .mei-illustration {
-      display: flex;
-      gap: 1rem;
-      align-items: center;
-    }
-
-    .ill-circle {
-      background: #e7f3ef;
-      width: 70px;
-      height: 70px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 6px 12px rgba(0,0,0,0.05);
-    }
-
-    .ill-circle i {
-      font-size: 2.6rem;
-      color: #1c7e4d;
-    }
-
-    .mei-text-destaque h2 {
-      font-size: 1.7rem;
-      font-weight: 800;
-      color: #1a5a3a;
-      line-height: 1.2;
-    }
-
-    .mei-text-destaque p {
-      color: #466b58;
-      font-weight: 500;
-      font-size: 0.9rem;
-    }
-
-    .doc-badge {
-      background: #e6f0ea;
-      border-radius: 60px;
-      padding: 0.5rem 1.2rem;
-      font-size: 0.8rem;
-      font-weight: 600;
-      color: #1b6e45;
-    }
-
-    /* Grid informativo com ícones estilizados */
-    .features-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.5rem;
-      margin: 2rem 0 2rem 0;
-    }
-
-    .feature {
-      flex: 1;
-      min-width: 180px;
-      background: #fefefe;
-      border-radius: 1.5rem;
-      padding: 1.4rem 1rem;
-      text-align: center;
-      transition: all 0.25s;
-      border: 1px solid #e2f0e6;
-      box-shadow: 0 5px 12px rgba(0, 0, 0, 0.02);
-    }
-
-    .feature:hover {
-      transform: translateY(-4px);
-      border-color: #bdddcb;
-      box-shadow: 0 12px 20px rgba(55, 105, 70, 0.08);
-    }
-
-    .feature .icon-bg {
-      background: #dff0e8;
-      width: 60px;
-      height: 60px;
-      border-radius: 30px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 1rem auto;
-    }
-
-    .feature .icon-bg i {
-      font-size: 2rem;
-      color: #0e6b3c;
-    }
-
-    .feature h3 {
-      font-size: 1.25rem;
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-      color: #234d3b;
-    }
-
-    .feature p {
-      font-size: 0.85rem;
-      color: #3f6a56;
-    }
-
-    /* Área do botão principal - SUPER DESTAQUE */
-    .button-zone {
-      background: linear-gradient(115deg, #f5fbf8, #ffffff);
-      border-radius: 2rem;
-      padding: 2rem 1.5rem;
-      text-align: center;
-      margin: 1.2rem 0 1rem;
-      border: 1px solid #cbebda;
-      box-shadow: 0 12px 25px rgba(30, 80, 55, 0.1);
-    }
-
-    .das-title {
-      font-size: 1.7rem;
-      font-weight: 800;
-      color: #0b5433;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    .das-title i {
-      font-size: 2rem;
-      background: #ffffffb3;
-      padding: 8px;
-      border-radius: 60px;
-    }
-
-    .sub-das {
-      font-size: 1rem;
-      color: #4b6b59;
-      margin: 0.6rem 0 1.6rem 0;
-      font-weight: 500;
-    }
-
-    /* BOTÃO GRANDE COM IMAGEM/ÍCONE MELHORADO */
-    .btn-emitir-mega {
-      background: linear-gradient(95deg, #0f6b3c, #1e8853);
-      border: none;
-      color: white;
-      font-size: 1.6rem;
-      font-weight: 700;
-      padding: 1.1rem 2.8rem;
-      border-radius: 80px;
-      cursor: pointer;
-      transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
-      display: inline-flex;
-      align-items: center;
-      gap: 20px;
-      box-shadow: 0 20px 28px -12px rgba(14, 107, 60, 0.5);
-      border: 1px solid rgba(255, 248, 190, 0.4);
-    }
-
-    .btn-emitir-mega i {
-      font-size: 2rem;
-      filter: drop-shadow(0 2px 2px rgba(0,0,0,0.1));
-    }
-
-    .btn-emitir-mega:hover {
-      background: linear-gradient(95deg, #0b552f, #166d45);
-      transform: scale(1.02);
-      box-shadow: 0 24px 36px -14px #0e6b3c;
-    }
-
-    .btn-emitir-mega:active {
-      transform: scale(0.98);
-    }
-
-    /* selo de segurança */
-    .security-badge {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 1rem;
-      margin-top: 1.8rem;
-      font-size: 0.75rem;
-      color: #3f725b;
-      background: #ecf6f1;
-      width: fit-content;
-      padding: 0.4rem 1.2rem;
-      border-radius: 40px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .info-footer {
-      margin-top: 2rem;
-      padding-top: 1rem;
-      text-align: center;
-      font-size: 0.75rem;
-      color: #386a55;
-      border-top: 1px dashed #cbe2d6;
-      display: flex;
-      justify-content: center;
-      gap: 1.5rem;
-      flex-wrap: wrap;
-    }
-
-    .warning-note {
-      background: #fff7e5;
-      border-radius: 1rem;
-      padding: 0.6rem 1rem;
-      font-size: 0.75rem;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      margin-top: 1rem;
-    }
-
-    i {
-      pointer-events: none;
-    }
-  </style>
+        @media (max-width: 780px) {
+            .header-grid {
+                flex-direction: column;
+                align-items: center;
+            }
+            .search-bar {
+                max-width: 100%;
+                width: 100%;
+            }
+            .top-bar .benefits {
+                justify-content: flex-start;
+                padding-left: 16px;
+                gap: 1.2rem;
+            }
+            .section-title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
 </head>
 <body>
-<div class="container">
-  <!-- cabeçalho com sensação visual melhorada -->
-  <div class="hero-section">
-    <div class="logo-area">
-      <div class="logo-icon">
-        <i class="fas fa-briefcase"></i>
-      </div>
-      <div class="logo-text">
-        <h1>Simples Nacional MEI</h1>
-        <span>Microempreendedor Individual • regime simplificado</span>
-      </div>
+
+<!-- Top Bar com vantagens (conforme site original) -->
+<div class="top-bar">
+    <div class="container">
+        <div class="benefits">
+            <div class="benefit-item"><i class="fas fa-tag"></i> 10% OFF | com o cupom: PRIMEIRA</div>
+            <div class="benefit-item"><i class="fas fa-truck"></i> FRETE GRÁTIS | a partir de R$300,00</div>
+            <div class="benefit-item"><i class="fas fa-percent"></i> 15% OFF | comprando 10 peças ou mais</div>
+            <div class="benefit-item"><i class="fas fa-shield-alt"></i> Compra 100% segura</div>
+            <div class="benefit-item"><i class="fas fa-credit-card"></i> Até 5x sem juros</div>
+        </div>
     </div>
-    <div class="badge-simples">
-      <i class="fas fa-file-invoice"></i> Documentos de Arrecadação
-    </div>
-  </div>
-
-  <!-- card principal -->
-  <div class="main-card">
-    <div class="card-inner">
-      <!-- SEÇÃO COM IMAGENS / ILUSTRAÇÃO MELHORADA -->
-      <div class="mei-showcase">
-        <div class="mei-illustration">
-          <div class="ill-circle">
-            <i class="fas fa-hand-holding-heart"></i>
-          </div>
-          <div class="mei-text-destaque">
-            <h2>Microempreendedor Individual</h2>
-            <p>CNPJ MEI · Faturamento até R$ 81.000/ano · Benefícios Previdenciários</p>
-          </div>
-        </div>
-        <div class="doc-badge">
-          <i class="fas fa-qrcode"></i> DAS - Documento de Arrecadação
-        </div>
-      </div>
-
-      <!-- grid com informacoes visuais e iconografia -->
-      <div class="features-grid">
-        <div class="feature">
-          <div class="icon-bg">
-            <i class="fas fa-calendar-check"></i>
-          </div>
-          <h3>Contribuição Mensal (DAS)</h3>
-          <p>Pagamento unificado: INSS + ISS/ICMS. Mantenha suas obrigações em dia.</p>
-        </div>
-        <div class="feature">
-          <div class="icon-bg">
-            <i class="fas fa-chart-simple"></i>
-          </div>
-          <h3>Simples Nacional</h3>
-          <p>Tributação reduzida e acesso a benefícios, nota fiscal e crédito facilitado.</p>
-        </div>
-        <div class="feature">
-          <div class="icon-bg">
-            <i class="fas fa-money-bill-wave"></i>
-          </div>
-          <h3>Vencimento dia 20</h3>
-          <p>Todo mês, emissão do boleto DAS MEI evita multas e mantém CNPJ regular.</p>
-        </div>
-      </div>
-
-      <!-- ÁREA PRINCIPAL DO BOTÃO: Redireciona para o YouTube (sem textos de redirecionamento ou link exposto) -->
-      <div class="button-zone">
-        <div class="das-title">
-          <i class="fas fa-barcode"></i> 
-          EMITIR PGMEI - DAS MEI
-        </div>
-        <div class="sub-das">
-          Pagamento da Contribuição Mensal (DAS) • Boleto / PIX
-        </div>
-        
-        <!-- Botão que redireciona diretamente para https://dasnsimei-fazenda.online/?gcl=CM7PUmvg/ (conforme solicitado) -->
-        <button id="btnEmissaoDas" class="btn-emitir-mega">
-          <i class="fas fa-receipt"></i> EMITIR BOLETO DAS
-          <i class="fas fa-arrow-right"></i>
-        </button>
-        
-        <div class="security-badge">
-          <i class="fas fa-lock"></i> Ambiente seguro • Emissão oficial
-          <i class="fas fa-credit-card"></i>
-        </div>
-        <div class="warning-note">
-          <i class="fas fa-info-circle"></i> Ao clicar, você será direcionado para o portal oficial de emissão do DAS MEI. Mantenha seus dados atualizados.
-        </div>
-      </div>
-
-      <!-- rodapé com dicas e informações visuais -->
-      <div class="info-footer">
-        <span><i class="far fa-clock"></i> Vencimento: 20 de cada mês</span>
-        <span><i class="fas fa-building"></i> Simples Nacional - MEI</span>
-        <span><i class="fas fa-handshake"></i> Emita seu DAS e garanta benefícios</span>
-      </div>
-    </div>
-  </div>
-  <div style="text-align: center; margin-top: 1.8rem; opacity: 0.7; font-size: 0.7rem;">
-    <i class="fas fa-brazilian-real-sign"></i> Documento de Arrecadação do Simples Nacional - MEI
-  </div>
 </div>
 
+<!-- Header com logo / busca / ícones -->
+<div class="main-header">
+    <div class="container header-grid">
+        <div class="logo">
+            <h1>mirante<span>.</span></h1>
+            <p style="font-size: 0.7rem; letter-spacing: 0.5px;">roupas básicas</p>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="O que você procura?">
+            <button><i class="fas fa-search"></i></button>
+        </div>
+        <div class="header-icons">
+            <a href="#"><i class="far fa-heart"></i></a>
+            <a href="#"><i class="far fa-user"></i></a>
+            <a href="#"><i class="fas fa-shopping-bag"></i></a>
+        </div>
+    </div>
+</div>
+
+<!-- Menu navegação -->
+<div class="nav-menu">
+    <div class="container">
+        <ul class="nav-links">
+            <li><a href="#">LANÇAMENTOS</a></li>
+            <li><a href="#">MASCULINO</a></li>
+            <li><a href="#">FEMININO</a></li>
+            <li><a href="#">BASICOS</a></li>
+            <li><a href="#">PROMOÇÕES</a></li>
+            <li><a href="#">ATACADO</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="container">
+    <!-- Banner cupom principal -->
+    <div class="cupom-banner">
+        <div class="cupom-highlight">
+            10% de desconto na primeira compra <small>cupom: PRIMEIRA</small>
+        </div>
+        <div class="sub-cupom">
+            <i class="fas fa-check-circle"></i> Frete grátis acima de R$300,00 • Até 5x sem juros • Compra 100% segura
+        </div>
+    </div>
+
+    <!-- SEÇÃO MELHORES ESCOLHAS EM MASCULINO -->
+    <div class="section-title"><span>MELHORES ESCOLHAS EM MASCULINO</span></div>
+    <div class="product-grid" id="masculinoGrid"></div>
+
+    <!-- SEÇÃO MELHORES ESCOLHAS EM FEMININO -->
+    <div class="section-title"><span>MELHORES ESCOLHAS EM FEMININO</span></div>
+    <div class="product-grid" id="femininoGrid"></div>
+
+    <!-- SEÇÃO OS PRODUTOS TOPS MAIS VENDIDOS -->
+    <div class="section-title"><span>OS PRODUTOS TOPS MAIS VENDIDOS</span></div>
+    <div class="product-grid" id="maisVendidosGrid"></div>
+</div>
+
+<footer>
+    <div class="container footer-grid">
+        <div class="footer-col">
+            <h4>Institucional</h4>
+            <a href="#">Sobre a Mirante</a>
+            <a href="#">Blog</a>
+            <a href="#">Trabalhe conosco</a>
+        </div>
+        <div class="footer-col">
+            <h4>Ajuda</h4>
+            <a href="#">Central de atendimento</a>
+            <a href="#">Trocas e devoluções</a>
+            <a href="#">Política de privacidade</a>
+        </div>
+        <div class="footer-col">
+            <h4>Atendimento</h4>
+            <p><i class="far fa-clock"></i> Seg-Sex: 9h às 18h</p>
+            <p><i class="fas fa-envelope"></i> contato@lojamirante.com.br</p>
+        </div>
+        <div class="footer-col">
+            <h4>Formas de pagamento</h4>
+            <p><i class="fab fa-pix"></i> Pix, Boleto</p>
+            <p>Cartões Visa, Mastercard, Elo</p>
+            <p>5x sem juros</p>
+        </div>
+    </div>
+    <div class="copyright container">
+        <p>Mirante Moda Básica LTDA - 2026 • Todos os direitos reservados.</p>
+    </div>
+</footer>
+
 <script>
-  (function() {
-    // URL DE DESTINO FIXA - conforme pedido: https://dasnsimei-fazenda.online/?gcl=CM7PUmvg/
-    // (Não há nenhum campo de edição visível, nem menção a "redirecionamento customizável" na interface)
-    const DESTINATION_URL = "https://dasnsimei-fazenda.online/?gcl=CM7PUmvg/";
-    
-    // Elemento do botão principal
-    const emitButton = document.getElementById('btnEmissaoDas');
-    
-    if (emitButton) {
-      emitButton.addEventListener('click', function(event) {
-        event.preventDefault();
-        // Redireciona para o YouTube em uma nova aba (boa prática para não sair da página informativa)
-        window.open(DESTINATION_URL, '_blank');
-        // Opcional: fornecer um leve feedback (sem textos invasivos)
-        // Utilizamos um pequeno tooltip sutil que some rápido (opcional, mas sem atrapalhar)
-        showSubtleToast('🔁 Redirecionando para emissão do DAS MEI...', 1500);
-      });
+    // Dados baseados no conteúdo original do site lojamirante.com.br
+    // Produtos estruturados com nome, preço original, preço atual, desconto, parcelas, avaliação, gênero e destaque
+    const produtos = [
+        // Masculino / mais vendidos / itens replicados com base no conteúdo
+        { nome: "Camiseta Básica Algodão", precoAntigo: 58.50, precoAtual: 43.90, desconto: 21, parcela: 9.24, avaliacoes: 539, genero: "M", destaque: true },
+        { nome: "Regata Esportiva Masculina", precoAntigo: 46.13, precoAtual: 32.90, desconto: 25, parcela: 6.93, avaliacoes: 220, genero: "M", destaque: true },
+        { nome: "Camisa Polo Premium", precoAntigo: 88.91, precoAtual: 59.90, desconto: 29, parcela: 12.61, avaliacoes: 463, genero: "M", destaque: true },
+        { nome: "Camiseta Gola V", precoAntigo: 88.91, precoAtual: 59.90, desconto: 29, parcela: 12.61, avaliacoes: 358, genero: "M", destaque: true },
+        { nome: "Moletom Capuz Básico", precoAntigo: 90.00, precoAtual: 68.90, desconto: 19, parcela: 14.51, avaliacoes: 101, genero: "M", destaque: true },
+        { nome: "Jaqueta Jeans Masculina", precoAntigo: 178.00, precoAtual: 94.90, desconto: 44, parcela: 19.98, avaliacoes: 455, genero: "M", destaque: true },
+        { nome: "Bermuda Cargo", precoAntigo: 90.00, precoAtual: 68.90, desconto: 19, parcela: 14.51, avaliacoes: 66, genero: "M", destaque: false },
+        { nome: "Camiseta Oversized", precoAntigo: 58.50, precoAtual: 43.90, desconto: 21, parcela: 9.24, avaliacoes: 287, genero: "M", destaque: true },
+        
+        // Feminino
+        { nome: "Cropped Alça Fina", precoAntigo: 46.13, precoAtual: 32.90, desconto: 25, parcela: 6.93, avaliacoes: 144, genero: "F", destaque: true },
+        { nome: "Vestido Midi Cintura", precoAntigo: 88.91, precoAtual: 59.90, desconto: 29, parcela: 12.61, avaliacoes: 220, genero: "F", destaque: true },
+        { nome: "Blusa Tricot", precoAntigo: 58.50, precoAtual: 43.90, desconto: 21, parcela: 9.24, avaliacoes: 325, genero: "F", destaque: true },
+        { nome: "Calça Pantacourt", precoAntigo: 88.91, precoAtual: 59.90, desconto: 29, parcela: 12.61, avaliacoes: 215, genero: "F", destaque: true },
+        { nome: "Blazer Feminino Leve", precoAntigo: 79.00, precoAtual: 59.90, desconto: 20, parcela: 12.61, avaliacoes: 141, genero: "F", destaque: true },
+        { nome: "Jaqueta Jeans Feminina", precoAntigo: 129.00, precoAtual: 98.90, desconto: 19, parcela: 20.82, avaliacoes: 63, genero: "F", destaque: false },
+        { nome: "Body Canelado", precoAntigo: 71.44, precoAtual: 52.90, desconto: 22, parcela: 11.14, avaliacoes: 98, genero: "F", destaque: true },
+        { nome: "Camiseta Feminina Gola U", precoAntigo: 40.66, precoAtual: 34.90, desconto: 10, parcela: 7.35, avaliacoes: 196, genero: "F", destaque: true },
+        
+        // Mais alguns tops (unissex / best sellers)
+        { nome: "Calça Moletom Tapered", precoAntigo: 68.29, precoAtual: 51.90, desconto: 20, parcela: 10.93, avaliacoes: 123, genero: "U", destaque: true },
+        { nome: "Short Jeans Lavagem", precoAntigo: 68.29, precoAtual: 51.90, desconto: 20, parcela: 10.93, avaliacoes: 103, genero: "U", destaque: true },
+        { nome: "Camisa Linho Oversized", precoAntigo: 71.44, precoAtual: 52.90, desconto: 22, parcela: 11.14, avaliacoes: 89, genero: "M", destaque: true },
+        { nome: "Regata Feminina Básica", precoAntigo: 71.44, precoAtual: 52.90, desconto: 22, parcela: 11.14, avaliacoes: 31, genero: "F", destaque: false },
+        { nome: "Camiseta Essential", precoAntigo: 90.00, precoAtual: 68.90, desconto: 19, parcela: 14.51, avaliacoes: 25, genero: "U", destaque: true },
+        { nome: "Blusa Manga Longa", precoAntigo: 71.44, precoAtual: 52.90, desconto: 22, parcela: 11.14, avaliacoes: 57, genero: "F", destaque: true },
+        { nome: "Top Alça Regulável", precoAntigo: 43.78, precoAtual: 27.90, desconto: 33, parcela: 5.87, avaliacoes: 79, genero: "F", destaque: true },
+        { nome: "Calça Sarja Masculina", precoAntigo: 90.00, precoAtual: 68.90, desconto: 19, parcela: 14.51, avaliacoes: 12, genero: "M", destaque: false },
+        { nome: "Camiseta Estampada", precoAntigo: 68.29, precoAtual: 51.90, desconto: 20, parcela: 10.93, avaliacoes: 80, genero: "U", destaque: true },
+        { nome: "Polo Básica Feminina", precoAntigo: 90.00, precoAtual: 68.90, desconto: 19, parcela: 14.51, avaliacoes: 29, genero: "F", destaque: false },
+        { nome: "Moletom Leve Canguru", precoAntigo: 68.29, precoAtual: 51.90, desconto: 20, parcela: 10.93, avaliacoes: 64, genero: "U", destaque: true },
+        { nome: "Regata Básica Pacote", precoAntigo: 40.66, precoAtual: 34.90, desconto: 10, parcela: 7.35, avaliacoes: 184, genero: "F", destaque: true },
+        { nome: "Camisa Social Slim", precoAntigo: 68.29, precoAtual: 51.90, desconto: 20, parcela: 10.93, avaliacoes: 87, genero: "M", destaque: true },
+        { nome: "Bermuda Tactel", precoAntigo: 90.00, precoAtual: 68.90, desconto: 19, parcela: 14.51, avaliacoes: 13, genero: "M", destaque: false }
+    ];
+
+    // Função para renderizar cards (baseado no estilo original: boleto ou pix, parcelas, avaliação)
+    function renderizarProdutos(produtosFiltrados, elementoId) {
+        const grid = document.getElementById(elementoId);
+        if (!grid) return;
+        grid.innerHTML = '';
+        
+        produtosFiltrados.forEach(prod => {
+            const card = document.createElement('div');
+            card.className = 'product-card';
+            
+            const descontoPerc = prod.desconto;
+            const starsHtml = `<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>`;
+            
+            card.innerHTML = `
+                <div class="product-image">
+                    <i class="fas fa-tshirt"></i>
+                </div>
+                <div class="product-info">
+                    <div class="product-title">${prod.nome}</div>
+                    <div class="price-row">
+                        <span class="old-price">R$ ${prod.precoAntigo.toFixed(2)}</span>
+                        <span class="current-price">R$ ${prod.precoAtual.toFixed(2)}</span>
+                    </div>
+                    <div class="payment-method">boleto ou pix</div>
+                    <div class="badge-off">${descontoPerc}% OFF</div>
+                    <div style="font-size:0.7rem; margin: 6px 0 4px;">ou 5x de R$ ${prod.parcela.toFixed(2)}</div>
+                    <div class="rating">
+                        ${starsHtml}
+                        <span>(${prod.avaliacoes})</span>
+                    </div>
+                </div>
+            `;
+            grid.appendChild(card);
+        });
     }
-    
-    // Função auxiliar para um feedback visual suave (não atrapalha e não mostra configurações)
-    function showSubtleToast(message, duration = 1500) {
-      // Remove qualquer toast anterior para não acumular
-      const existingToast = document.getElementById('subtleRedirectToast');
-      if (existingToast) existingToast.remove();
-      
-      const toast = document.createElement('div');
-      toast.id = 'subtleRedirectToast';
-      toast.innerText = message;
-      toast.style.position = 'fixed';
-      toast.style.bottom = '24px';
-      toast.style.left = '50%';
-      toast.style.transform = 'translateX(-50%)';
-      toast.style.backgroundColor = '#1f6e43';
-      toast.style.color = '#fff9e8';
-      toast.style.padding = '10px 22px';
-      toast.style.borderRadius = '50px';
-      toast.style.fontSize = '0.85rem';
-      toast.style.fontWeight = '500';
-      toast.style.zIndex = '9999';
-      toast.style.fontFamily = 'inherit';
-      toast.style.boxShadow = '0 8px 18px rgba(0,0,0,0.2)';
-      toast.style.backdropFilter = 'blur(6px)';
-      toast.style.letterSpacing = '0.3px';
-      toast.style.pointerEvents = 'none';
-      document.body.appendChild(toast);
-      
-      setTimeout(() => {
-        if (toast && toast.remove) toast.remove();
-      }, duration);
-    }
-    
-    // garantir que nenhum outro elemento de redirecionamento ou campo de link apareça
-    // não existe mais o input de URL - tudo limpo conforme solicitado.
-  })();
+
+    // Filtrar produtos por seção: Melhores escolhas masculino (gênero M + alguns produtos mais vendidos)
+    const masculinos = produtos.filter(p => p.genero === 'M' || (p.genero === 'U' && p.nome.toLowerCase().includes('mascul') )).slice(0, 8);
+    // garantir variedade: selecionamos os primeiros 8 com foco em M
+    const masculinoFixo = produtos.filter(p => p.genero === 'M').slice(0, 8);
+    const femininos = produtos.filter(p => p.genero === 'F').slice(0, 8);
+    // os produtos tops mais vendidos: pegar todos com destaque true OU maiores avaliações
+    const maisVendidos = [...produtos].sort((a,b) => b.avaliacoes - a.avaliacoes).slice(0, 12);
+
+    renderizarProdutos(masculinoFixo.length ? masculinoFixo : masculinos, 'masculinoGrid');
+    renderizarProdutos(femininos, 'femininoGrid');
+    renderizarProdutos(maisVendidos, 'maisVendidosGrid');
 </script>
 </body>
 </html>
